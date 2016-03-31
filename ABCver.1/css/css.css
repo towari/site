@@ -1,0 +1,485 @@
+@font-face {
+	font-family:'axr';
+	src:url(../font/axisstd-regular.woff) format("woff")
+}
+
+@font-face {
+	font-family:'kai';
+	src:url(../font/kai.woff) format("woff")
+}
+
+@font-face {
+	font-family:'hel';
+	src:url(../font/HelveticaCY.woff) format("woff")
+}
+
+body {
+	height:100%;
+	color:#fff;
+	font-size:20px;
+	font-family:'axr';
+	margin:0
+}
+
+.main_body {
+	position:absolute;
+	z-index:2;
+	height:100%;
+	width:100%;
+	background-color:#fff;
+	font-size:20px;
+	font-family:'axr';
+	margin:0
+}
+
+.ttl_ovl {
+	position:absolute;
+	z-index:10;
+	width:100%;
+	height:100%;
+	background-color:rgba(244,244,248,0.4);
+	margin:0 auto
+}
+
+.main {
+	color:#555;
+	position:absolute;
+	z-index:10;
+	width:100%;
+	height:auto;
+	top:100%;
+	background-color:rgba(244,244,244,1);
+	margin:0 auto;
+	box-shadow:0 0 10px 10px rgba(0,0,0,0.4)
+}
+
+.r_ttl {
+	color:#555;
+	font-size:24pt;
+	line-height:1;
+	margin:10px 2px;
+	padding:10px 5px;
+	border-bottom:3px solid #6a68ef;
+	text-align:center
+}
+
+.site_ttl {
+	width:100%;
+	height:100%;
+	top:50%
+}
+
+.notes {
+	font-size:15px;
+	color:#a00
+}
+
+/* 画面サイズごとにレイアウト変更 */
+@media screen and (min-width: 800px) {
+div#sidebar {
+	width:100%;
+	margin:0 auto
+}
+
+#page_top {
+	z-index:11;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	font-size:77%;
+	font-family:"メイリオ",Meiryo,sans-serif
+}
+
+#page_top a {
+	background:rgba(100,100,180,0.8);
+	text-decoration:none;
+	color:#fff;
+	width:85px;
+	padding:23px 0;
+	text-align:center;
+	display:block;
+	border-radius:40px;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px
+}
+
+#page_top a:hover {
+	text-decoration:none;
+	background:rgba(200,200,235,0.6)
+}
+
+h1 {
+	font-family:'hel';
+	color:#555;
+	font-size:140px;
+	margin:0
+}
+
+h2 {
+	font-family:'axr';
+	color:#555;
+	font-size:50px;
+	margin:0
+}
+
+.r_conts {
+	z-index:10;
+	width:25%;
+	height:auto;
+	top:100%;
+	background-color:rgba(44,244,224,0);
+	margin:10px 10px -10px 0;
+	margin-left:auto;
+	float:right;
+	font-family:'kai';
+	word-wrap:break-word
+}
+
+.l_conts {
+	z-index:10;
+	width:70%;
+	height:auto;
+	top:100%;
+	background-color:rgba(244,44,224,0);
+	margin:10px 0 0 10px;
+	margin-right:auto;
+	float:left;
+	font-family:'axr';
+	line-height:20px;
+	font-size:20px;
+	border-right:solid
+}
+
+.details_btm {
+	position:relative;
+	background-color:#aaf;
+	width:320px;
+	border-radius:8px;
+	color:#fff;
+	line-height:52px;
+	-webkit-transition:none;
+	transition:none;
+	box-shadow:0 3px 0 #66f;
+	text-shadow:0 1px 1px rgba(0,0,0,.3);
+	margin:auto;
+	text-align:center;
+	font-size:20px
+}
+
+.details_btm:hover {
+	background-color:#99f;
+	box-shadow:0 3px 0 #55f
+}
+
+.details_btm:active {
+	top:3px;
+	box-shadow:none
+}
+}
+
+@media screen and (max-width: 800px) {
+div#sidebar {
+	width:100%;
+	margin:0 auto
+}
+
+h1 {
+	font-family:'hel';
+	color:#555;
+	font-size:120px;
+	margin:0
+}
+
+h2 {
+	font-family:'axr';
+	color:#555;
+	font-size:40px;
+	margin:0
+}
+
+.r_conts {
+	z-index:10;
+	width:95%;
+	height:auto;
+	top:100%;
+	background-color:rgba(44,244,224,0);
+	margin:auto;
+	margin-left:auto;
+	font-family:'kai';
+	border-top:solid;
+	word-wrap:break-word
+}
+
+.l_conts {
+	z-index:10;
+	width:95%;
+	height:auto;
+	top:100%;
+	background-color:rgba(244,44,224,0);
+	margin:auto;
+	margin-right:auto;
+	font-family:'axr';
+	font-size:20px;
+	line-height:20px
+}
+
+.details_btm {
+	position:relative;
+	background-color:#aaf;
+	width:300px;
+	border-radius:8px;
+	color:#fff;
+	line-height:52px;
+	-webkit-transition:none;
+	transition:none;
+	box-shadow:0 3px 0 #66f;
+	text-shadow:0 1px 1px rgba(0,0,0,.3);
+	margin:auto;
+	text-align:center;
+	font-size:20px
+}
+
+.details_btm:hover {
+	background-color:#99f;
+	box-shadow:0 3px 0 #55f
+}
+
+.details_btm:active {
+	top:3px;
+	box-shadow:none
+}
+}
+
+/* ローディング */
+#loader {
+	width:950px;
+	height:100%;
+	display:none;
+	position:fixed;
+	_position:absolute;
+/* IE6対策 */
+	top:50%;
+	left:50%;
+	margin-top:-50px;
+/* heightの半分のマイナス値 */
+	margin-left:-50px;
+/* widthの半分のマイナス値 */
+	z-index:100;
+	position:fixed
+}
+
+/*モンスターボール*/
+.load_ani {
+	top:50%;
+	width:100px;
+	height:100px;
+	background-color:#000;
+	border-radius:50%;
+	border:30px solid #fff;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-animation:spin 1.5s linear infinite;
+	-moz-animation:spin 1.5s linear infinite;
+	-ms-animation:spin 1.5s linear infinite;
+	-o-animation:spin 1.5s linear infinite;
+	animation:spin 1.5s linear infinite
+}
+
+.load_ani:before {
+	content:"";
+	z-index:2;
+	top:5px;
+	left:5px;
+	width:30px;
+	height:30px;
+	background-color:#fff;
+	border-radius:50%;
+	margin:0 auto;
+	position:absolute
+}
+
+.load_ani:after {
+	content:"";
+	z-index:1;
+	top:18px;
+	left:-30px;
+	width:100px;
+	height:4px;
+	background-color:#000;
+	margin:0 auto;
+	position:absolute
+}
+
+@-webkit-keyframes spin {
+0% {
+	-webkit-transform:rotate(0deg)
+}
+
+100% {
+	-webkit-transform:rotate(360deg)
+}
+}
+
+@-moz-keyframes spin {
+0% {
+	-moz-transform:rotate(0deg)
+}
+
+100% {
+	-moz-transform:rotate(360deg)
+}
+}
+
+@-ms-keyframes spin {
+0% {
+	-ms-transform:rotate(0deg)
+}
+
+100% {
+	-ms-transform:rotate(360deg)
+}
+}
+
+@-o-keyframes spin {
+0% {
+	-o-transform:rotate(0deg)
+}
+
+100% {
+	-o-transform:rotate(360deg)
+}
+}
+
+@keyframes spin {
+0% {
+	transform:rotate(0deg)
+}
+
+100% {
+	transform:rotate(360deg)
+}
+}
+
+#fade {
+	width:100%;
+	height:100%;
+	display:none;
+	background-color:#000;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:50;
+	position:fixed
+}
+
+/* スクロールスピード */
+#parallax-bg1 {
+	z-index:6;
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100%
+}
+
+#bg1-1 {
+	position:absolute;
+	top:-2%;
+	left:-17px
+}
+
+#parallax-bg2 {
+	z-index:6;
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100%
+}
+
+#bg2-1 {
+	position:absolute;
+	top:30%;
+	left:/* right: 50%; */
+-15px
+}
+
+#parallax-bg3 {
+	z-index:6;
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100%
+}
+
+#bg3-1 {
+	position:absolute;
+	bottom:0;
+	left:-17px
+}
+
+#parallax-bg4 {
+	z-index:5;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	height:100%;
+	background-image:url(../img/fav.png);
+	background-size:auto 100%;
+	background-position:right;
+	background-repeat:no-repeat
+}
+
+#bg4-1 {
+	position:absolute;
+	bottom:0
+}
+
+.b_img {
+	z-index:5;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	height:100%;
+	background-image:url(../img/fav.png);
+	background-size:auto 100%;
+	background-position:right;
+	background-repeat:no-repeat
+}
+
+/*リンク色*/
+a:link {
+	color:#335
+}
+
+a:visited {
+	color:green
+}
+
+a:hover {
+	color:#55f
+}
+
+a:active {
+	color:#ff0
+}
+
+a {
+	text-decoration:none
+}
+
+/*カウントダウン*/
+.cou {
+	text-align:center;
+	margin:10px 0;
+	font-family:'kai';
+	font-size:30px;
+	color:#a00
+}
+
+#CDT {
+	text-align:center;
+	margin:10px 0;
+	font-family:'kai';
+	font-size:40px;
+	color:#a00
+}
