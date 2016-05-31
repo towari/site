@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xml:lang="ja" lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=0">
+    <title>jQuery OnePage Scroll</title>
+    <link rel="stylesheet" href="http://black-flag.net/data/css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css" media="screen" />
+
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script src="js/animatedModal.js"></script>
+    <script src="js/jsa.js"></script>
+    <script src="js/onescrollPage.js"></script>
+    <script>
+        $(function () {
+            $('#demo01').animatedModal({
+                modalTarget: 'content01',
+                animatedIn: 'flipInY',
+                animatedOut: 'flipOutX',
+                animationDuration: '0.8s',
+                color: '#fff',
+            });
+            //背景色を半透明に
+            $('#content01').css('backgroundColor', 'rgba(255,255,255,0.8)')
+        });
+    </script>
+</head>
+
+<body>
+
+    <a id="demo01" href="#content01"><img src="img/nav.png"></a>
+    <div id="content01">
+        <span class="close-content01" style="float: right;"><img src="img/nav.png"></span>
+        <div class="modal-content">
+            <ul>
+                <li class="marg"><a href="#"><i class="fa fa-diamond"></i>menu1</a></li>
+                <li class="marg"><a href="#"><i class="fa fa-anchor"></i>menu2</a></li>
+                <li class="marg"><a href="#"><i class="fa fa-leaf"></i>menu3</a></li>
+                <li class="marg"><a href="#"><i class="fa fa-heart"></i>menu4</a></li>
+                <li class="marg"><a href="#"><i class="fa fa-gamepad"></i>menu5</a></li>
+                <li class="marg"><ahref="#"><i class="fa fa-smile-o"></i>        <input type="button" id="trbt" value="結果を呟く" />
+</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="container">
+
+        <section id="stage1" class="stageBase">
+            <div class="fieldWrap">
+                <h1>jQuery OnePage Scroll</h1>
+                <p>ここは1ページ目</p>
+            </div>
+            <!--/.fieldWrap -->
+        </section>
+
+        <section id="stage2" class="stageBase">
+            <div class="fieldWrap">
+                <p>ここは2ページ目</p>
+            </div>
+            <!--/.fieldWrap -->
+        </section>
+
+        <section id="stage3" class="stageBase">
+            <div class="stageSlide">
+                <div class="slidePanel">
+                    <div class="fieldWrap">
+                        <p>ここは3ページ目
+                            <br> スライドエリア【1】
+                        </p>
+                    </div>
+                    <!--/.fieldWrap -->
+                </div>
+                <!--/.slidePanel -->
+
+                <div class="slidePanel">
+                    <div class="fieldWrap">
+                        <p>スライドエリア【2】</p>
+                    </div>
+                    <!--/.fieldWrap -->
+                </div>
+                <!--/.slidePanel -->
+
+                <div class="slidePanel">
+                    <div class="fieldWrap">
+                        <p>スライドエリア【3】</p>
+                    </div>
+                    <!--/.fieldWrap -->
+                </div>
+                <!--/.slidePanel -->
+            </div>
+            <!--/.stageSlide -->
+        </section>
+
+        <section id="stage4" class="stageBase">
+            <div class="stageSlide">
+                <div class="slidePanel">
+                    <div class="fieldWrap">
+                        <p>スライドエリア【1】</p>
+                    </div>
+                    <!--/.fieldWrap -->
+                </div>
+                <!--/.slidePanel -->
+
+                <div class="slidePanel slideInitial">
+                    <div class="fieldWrap">
+                        <p>ここは4ページ目
+                            <br> スライドエリア【2】
+                        </p>
+                    </div>
+                    <!--/.fieldWrap -->
+                </div>
+                <!--/.slidePanel -->
+
+                <div class="slidePanel">
+                    <div class="fieldWrap">
+                        <p>スライドエリア【3】</p>
+                    </div>
+                    <!--/.fieldWrap -->
+                </div>
+                <!--/.slidePanel -->
+
+            </div>
+            <!--/.stageSlide -->
+        </section>
+
+        <section id="stage5" class="stageBase">
+            <div class="stageSlide">
+                <div class="slidePanel">
+                    <div class="fieldWrap">
+                        <p>スライドエリア【1】</p>
+                    </div>
+                    <!--/.fieldWrap -->
+                </div>
+                <!--/.slidePanel -->
+
+                <div class="slidePanel">
+                    <div class="fieldWrap">
+                        <p>スライドエリア【2】</p>
+                    </div>
+                    <!--/.fieldWrap -->
+                </div>
+                <!--/.slidePanel -->
+
+                <div class="slidePanel">
+                    <div class="fieldWrap">
+                        <p>スライドエリア【3】</p>
+                    </div>
+                    <!--/.fieldWrap -->
+                </div>
+                <!--/.slidePanel -->
+
+                <div class="slidePanel slideInitial">
+                    <div class="fieldWrap">
+                        <p>ここは5ページ目
+                            <br> スライドエリア【4】
+                        </p>
+                    </div>
+                    <!--/.fieldWrap -->
+                </div>
+                <!--/.slidePanel -->
+
+                <h2>COPYRIGHT &copy; <a href="http://black-flag.net/">BLACKFLAG.NET</a> ALL RIGHTS RESERVED.</h2>
+            </div>
+            <!--/.stageSlide -->
+        </section>
+        <section id="stage7" class="stageBase">
+            <div class="fieldWrap">
+                <p>ここは2ページ目</p>
+            </div>
+            <!--/.fieldWrap -->
+        </section>
+        <section id="stage6" class="stageBase">
+            <div class="fieldWrap">
+                <p>ここは2ページ目</p>
+
+            </div>
+            <!--/.fieldWrap -->
+        </section>
+
+    </div>
+    <!--/#container-->
+
+</body>
+
+</html>
